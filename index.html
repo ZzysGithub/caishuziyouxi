@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--
+			GitHub作者：ZzysGithub
+			未经授权，禁止转载
+		-->
+		<meta charset="UTF-8" />
+		<title>猜数字游戏</title>
+	</head>
+	<body>
+		<!--整体布局-->
+		<h1>猜数字游戏</h1>
+		<hr>
+		<p>请输入1-1000之间的数字：</p>
+		<!--输入框-->
+		<input type="text" id="number" />
+		<input type="button" value="提交" id="btn" />
+		<!--JS脚本-->
+		<script>
+			//加载btn对象
+			var btn=document.getElementById("btn");
+			//添加随机数n，大于0小于1000
+			var n=parseInt(Math.random()*1000);
+			//添加btn对象的onclick事件
+			btn.onclick=function(){
+				//加载number对象的value值
+				var number=document.getElementById("number").value;
+				//判断
+				if(number==n){
+					//如果number等于n，弹出成功提示
+					alert("恭喜你！挑战成功！");
+				}else if(number<n){
+					//如果number小于n，弹出小于提示
+					alert("太小了！");
+				}else if(number>n){
+					//如果number大于n，弹出大于提示
+					alert("太大了！");
+				}else{
+					//如果没有输入，则提示输入1-1000之间的数字
+					alert("请输入1-1000之间的数字！")
+				}
+			}
+		</script>
+	</body>
+</html>
