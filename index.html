@@ -2,20 +2,25 @@
 <html>
 	<head>
 		<!--
+			测试版 0.2
 			GitHub作者：ZzysGithub
 			未经授权，禁止转载
 		-->
 		<meta charset="UTF-8" />
 		<title>猜数字游戏</title>
+		<!--加载CSS样式-->
+		<link href="css/index.css" rel="stylesheet" />
 	</head>
 	<body>
 		<!--整体布局-->
-		<h1>猜数字游戏</h1>
-		<hr>
-		<p>请输入1-1000之间的数字：</p>
-		<!--输入框-->
-		<input type="text" id="number" />
-		<input type="button" value="提交" id="btn" />
+		<div class="container">
+			<h1>猜数字游戏</h1>
+		    <hr>
+		    <p>请输入1-1000之间的数字：</p>
+		    <!--输入框-->
+		    <input type="text" id="number" />
+		    <input type="button" value="提交" id="btn" />
+		</div>
 		<!--JS脚本-->
 		<script>
 			//加载btn对象
